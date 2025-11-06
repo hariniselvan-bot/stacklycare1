@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stackly HealthPortal  — Trusted Medical News</title>
+  <link rel="stylesheet" href="doctors.css" />
+</head>
+<body>
+
+<!-- ✅ HEADER START -->
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="logo.jpg" alt="STACKLY Logo">
+    <span>STACKLY <strong>Health Care</strong></span>
+  </a>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html">Portal 1</a>
+    <a href="home2.html">Portal 2</a>
+    <a href="docsavai.html">Available Doctors</a>
+    <a href="healthyliving.html">Healthy Living</a>
+    <a href="condition.html">Condition</a>
+    <a href="contact1.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <a href="docsavai.html" class="find-doctor-btn">Find a Doctor</a>
+
+  <div class="menu-icon" id="menu-icon">&#9776;</div>
+</header>
+<!-- ✅ HEADER END -->
+
+
+<!-- ✅ CSS -->
+<style>
+  /* Basic Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf6f4;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Left - Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+    color: #003b3b;
+    font-weight: bold;
+  }
+
+  /* Center - Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex: 1;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #003b3b;
+    font-weight: 500;
+  }
+
+  .navbar a:hover {
+    color: #009999;
+  }
+
+  /* Right - Button */
+  .find-doctor-btn {
+    background-color: #009999;
+    color: white !important;
+    padding: 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .find-doctor-btn:hover {
+    background-color: #007777;
+  }
+
+  /* Hamburger Icon */
+  .menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    color: #003b3b;
+    margin-left: 10px;
+  }
+
+  /* ✅ Responsive Styles */
+  @media (max-width: 900px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #009999;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      width: 220px;
+    }
+
+    .navbar.active {
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .navbar a:hover {
+      background-color: #007777;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .find-doctor-btn {
+      display: none; /* hide in mobile for compact layout */
+    }
+  }
+</style>
+
+<!-- ✅ SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  });
+</script>
+
+  
+  <main class="container doctors-list">
+    <h2>Available Doctors</h2>
+
+    <div class="doctor-list">
+      <!-- Doctor 1 -->
+      <div class="doctor-card">
+        <img src="Dr. Geetha Lakshmipathy.jpg" alt="Dr. Geetha Lakshmipathy">
+        <div class="info">
+          <h3>Dr. Geetha Lakshmipathy</h3>
+          <p>Neurologist — MBBS, MD (Neurology)</p>
+          <p>Chennai • 15+ Years Experience</p>
+         </div>
+    <div class="doc-fee">
+      <span>₹1000</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card">
+        <img src="Dr. Mangalapathi Saravanan.jpg" alt="Dr. Mangalapathi Saravanan">
+        <div class="info">
+          <h3>Dr. Mangalapathi Saravanan</h3>
+          <p>Nephrologist — MBBS, MD (Nephro)</p>
+          <p>Chennai • 12+ Years Experience</p>
+        </div>
+            <div class="doc-fee">
+          <span>₹1500</span>
+          <a href="contact.html">Visit Doctor</a>
+        </div>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="doctor-card">
+        <img src="Dr. Madan Mohan Reddy.jpg" alt="Dr. Madan Mohan Reddy">
+        <div class="info">
+          <h3>Dr. Madan Mohan Reddy</h3>
+          <p>Orthopaedic Surgeon — MBBS, MS (Ortho)</p>
+          <p>Hyderabad • 10+ Years Experience</p>
+           </div>
+    <div class="doc-fee">
+      <span>₹700</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 4 -->
+      <div class="doctor-card">
+        <img src="Dr. K. Ramesh.jpg" alt="Dr. K Ramesh">
+        <div class="info">
+          <h3>Dr. K. Ramesh</h3>
+          <p>Psychiatrist — MBBS, MD (Psychiatry)</p>
+          <p>Chennai • 8+ Years Experience</p>
+          </div>
+    <div class="doc-fee">
+      <span>₹400</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 5 -->
+      <div class="doctor-card">
+        <img src="Dr. Brij K. Shanmugam.jpg" alt="Dr. Brij K Shanmugam">
+        <div class="info">
+          <h3>Dr. Brij K. Shanmugam</h3>
+          <p>Cardiologist — MBBS, MD (Cardio)</p>
+          <p>Hyderabad • 14+ Years Experience</p>
+           </div>
+    <div class="doc-fee">
+      <span>₹300</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+    
+
+      <!-- Doctor 6 -->
+      <div class="doctor-card">
+        <img src="Dr. Shyamala Gogi.jpg" alt="Dr. Shyamala Gogi">
+        <div class="info">
+          <h3>Dr. Shyamala Gogi</h3>
+          <p>Dermatologist — MBBS, MD (Skin)</p>
+          <p>Chennai • 9+ Years Experience</p>
+          </div>
+    <div class="doc-fee">
+      <span>₹600</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 7 -->
+      <div class="doctor-card">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=300&h=300" alt="Dr. Shiva Singh">
+        <div class="info">
+          <h3>Dr. Shiva Singh</h3>
+          <p>Endocrinologist — MBBS, DM (Endo)</p>
+          <p>Hyderabad • 11+ Years Experience</p>
+         </div>
+    <div class="doc-fee">
+      <span>₹500</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 8 -->
+      <div class="doctor-card">
+        <img src="Dr. Ranjana M.jpg" alt="Dr. Ranjana M">
+        <div class="info">
+          <h3>Dr. Ranjana M</h3>
+          <p>Pulmonologist — MBBS, MD (Pulmo)</p>
+          <p>Chennai • 10+ Years Experience</p>
+          </div>
+    <div class="doc-fee">
+      <span>₹450</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 9 -->
+      <div class="doctor-card">
+        <img src="Dr. Dristal Anilance.jpg" alt="Dr. Dristal Anilance">
+        <div class="info">
+          <h3>Dr. Dristal Anilance</h3>
+          <p>Ophthalmologist — MBBS, MS (Ophthal)</p>
+          <p>Hyderabad • 13+ Years Experience</p>
+          </div>
+    <div class="doc-fee">
+      <span>₹800</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+      <!-- Doctor 10 -->
+      <div class="doctor-card">
+        <img src="Dr. Archana S.jpg" alt="Dr. Archana S">
+        <div class="info">
+          <h3>Dr. Archana S</h3>
+          <p>General Physician — MBBS, MD (Medicine)</p>
+          <p>Chennai • 7+ Years Experience</p>
+         </div>
+    <div class="doc-fee">
+      <span>₹1000</span>
+      <a href="contact.html">Visit Doctor</a>
+    </div>
+  </div>
+
+    </div>
+  </main>
+  </body>
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left: Logo -->
+    <div class="footer-section logo-section">
+      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <h3>STACKLY</h3>
+    </div>
+
+    <!-- Middle: Links -->
+    <div class="footer-section links-section">
+      <h4>Check Us</h4>
+      <a href="index.html">Portal 1</a>
+      <a href="home2.html">Portal 2</a>
+      <a href="contact1.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <!-- Right: Address + Social Icons -->
+    <div class="footer-section contact-section">
+      <h4>Get In Touch</h4>
+      <p>MMR COMPLEX, Salem, Tamil Nadu 636008</p>
+      <p>+91 70107 92745</p>
+      <p>info@thestackly.com</p>
+
+      <!-- ✅ Social Media Icons below address -->
+      <div class="social-icons">
+        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=Salem,+Tamil+Nadu&output=embed"
+      width="100%" height="250" style="border:0; border-radius:10px;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ CSS -->
+<style>
+  .footer {
+    background-color: #0c0016;
+    color: white;
+    padding: 40px 20px 10px;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+
+  .links-section a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links-section a:hover {
+    color: #00cccc;
+  }
+
+  .contact-section p {
+    margin: 5px 0;
+    color: #ccc;
+  }
+
+  /* ✅ Social icons under address */
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin: 0 8px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00cccc;
+    transform: scale(1.1);
+  }
+  .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-section p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* ✅ Icons directly under address */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00cccc;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+
+  .footer-map {
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin: 15px 0;
+    }
+  }
+</style>
+
+<!-- ✅ Add this Font Awesome link inside your <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>

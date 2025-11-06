@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="drugs.css">
+</head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Header</title>
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 25px;
+  background:#eaf5f3;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== LOGO ===== */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{
+  width:35px;
+  height:35px;
+  border-radius:8px;
+}
+.logo h1{
+  font-size:1.2rem;
+  color:#0b4041;
+  font-weight:700;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#12343b;
+  font-weight:500;
+  transition:0.3s;
+}
+nav ul li a:hover{
+  color:#0ea5a0;
+}
+
+/* ===== BUTTON ===== */
+.find-btn{
+  background:#0ea5a0;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  z-index:10000;
+}
+.menu-toggle span{
+  width:28px;
+  height:3px;
+  background:#0b4041;
+  border-radius:2px;
+  transition:0.3s;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width:900px){
+  .menu-toggle{
+    display:flex;
+  }
+
+  nav{
+    position:absolute;
+    top:65px;
+    right:20px;
+    background:#0ea5a0;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.4s ease;
+    max-height:0;
+  }
+
+  nav.active{
+    max-height:300px;
+  }
+
+  nav ul{
+    flex-direction:column;
+    padding:10px 0;
+    align-items:center;
+    gap:15px;
+  }
+
+  nav ul li a{
+    color:#fff;
+    font-size:1rem;
+  }
+
+  .find-btn{
+    display:none;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Stackly Logo">
+        <h1>STACKLY Health</h1>
+      </a>
+    </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Portal 1</a></li>
+      <li><a href="home2.html">Portal 2</a></li>
+      <li><a href="pet.html">Pet Pills</a></li>
+      <li><a href="drugs.html">Drugs & Supplements</a></li>
+      <li><a href="BMI.html">BMI Checker</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+    </ul>
+  </nav>
+
+  <a href="docsavai.html" class="find-btn">Find a Doctor</a>
+</header>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navbar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+  <!-- HEADER -->
+
+
+  <!-- TOP DEALS SECTION -->
+  <section class="top-deals container">
+    <div class="deal green">
+      <h2>Top Deals of the Week</h2>
+      <a href="drugs.html">Shop Now</a>
+    </div>
+    <div class="deal supplements">
+      <h2>Vitamins & Supplements</h2>
+      <a href="drugs.html">Shop Now</a>
+    </div>
+    
+
+  <!-- PRODUCTS SECTION -->
+<section class="products container">
+  <h2>Products</h2>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="Prebiotic Fiber Capsules.jpg" alt="">
+      <h3>Prebiotic Fiber Capsules</h3>
+      <p><span class="price-old">$34.00</span> $24.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Nexium 24HR Capsules.jpg" alt="">
+      <h3>Nexium 24HR Capsules</h3>
+      <p>$15.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Umcka ColdCare Syrup.jpg" alt="">
+      <h3>Umcka ColdCare Syrup</h3>
+      <p>$5.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="Biotin 10000 MCG Tablets.jpg" alt="">
+      <h3>Biotin 10000 MCG Tablets</h3>
+      <p><span class="price-old">$18.00</span> $10.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Vitamin C 500mg Tablets.jpg" alt="">
+      <h3>Vitamin C 500mg Tablets</h3>
+      <p>$11.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="CLA 1000 Softgels.jpg" alt="">
+      <h3>CLA 1000 Softgels</h3>
+      <p><span class="price-old">$36.00</span> $30.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Vitamin D3 1000 IU.jpg" alt="">
+      <h3>Vitamin D3 1000 IU</h3>
+      <p>$12.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Omega 3 Fish Oil.jpg" alt="">
+      <h3>Omega 3 Fish Oil</h3>
+      <p>$20.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="Zinc Tablets 50mg.jpg" alt="">
+      <h3>Zinc Tablets 50mg</h3>
+      <p><span class="price-old">$10.00</span> $7.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Calcium + Vitamin D Combo.jpg" alt="">
+      <h3>Calcium + Vitamin D Combo</h3>
+      <p>$22.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Multivitamin for Women.jpg" alt="">
+      <h3>Multivitamin for Women</h3>
+      <p>$25.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="Vitamin B Complex Capsules.jpg" alt="">
+      <h3>Vitamin B Complex Capsules</h3>
+      <p><span class="price-old">$28.00</span> $19.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Iron + Folic Acid Tablets.jpg" alt="">
+      <h3>Iron + Folic Acid Tablets</h3>
+      <p>$14.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <img src="Magnesium 250mg.jpg" alt="">
+      <h3>Magnesium 250mg</h3>
+      <p>$17.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="Probiotic Daily Formula.jpg" alt="">
+      <h3>Probiotic Daily Formula</h3>
+      <p><span class="price-old">$32.00</span> $26.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+    <div class="product-card">
+      <span class="sale">Sale</span>
+      <img src="asprin.jpg" alt="">
+      <h3>Asprin Daily Formula</h3>
+      <p><span class="price-old">$38.00</span> $22.00</p>
+      <button onclick="addToCart('Vitamin C 500mg Tablets', 11)">Add to Cart</button>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ACE OFFER SECTION -->
+  <section class="ace-offer container">
+    <div class="offer-content">
+      <img src="ACE Cold Compress.jpg" alt="ACE Cold Compress">
+      <div class="text">
+        <h2>ACE Reusable Cold Compress</h2>
+        <p><span>20% OFF</span> - Shop Now</p>
+        <button class="add">Add to Cart</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT POSTS -->
+  <section class="recent-posts container">
+    <h2>Recent Posts</h2>
+    <div class="posts-grid">
+      <div class="post"><img src="5 Ways to Boost Immunity.jpg" alt=""><p>5 Ways to Boost Immunity</p></div>
+      <div class="post"><img src="Top 10 Vitamins for Health.jpg" alt=""><p>Top 10 Vitamins for Health</p></div>
+      <div class="post"><img src="Natural Beauty Remedies.jpg" alt=""><p>Natural Beauty Remedies</p></div>
+    </div>
+    <script>
+  
+</script>
+<script>
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Attach "Add to Cart" function to every button
+  document.querySelectorAll(".product-card").forEach(card => {
+    const btn = card.querySelector("button");
+    btn.addEventListener("click", () => {
+      const name = card.querySelector("h3").innerText;
+      const priceText = card.querySelector("p").innerText.replace(/[^0-9.]/g, '');
+      const price = parseFloat(priceText);
+      const img = card.querySelector("img").src;
+
+      cart.push({ name, price, img });
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Soft feedback animation
+      btn.innerText = "✅ Added!";
+      btn.style.background = "#0ea5a0";
+      setTimeout(() => {
+        btn.innerText = "Add to Cart";
+        btn.style.background = "";
+      }, 1200);
+    });
+  });
+</script>
+  </body>
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left: Logo -->
+    <div class="footer-section logo-section">
+      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <h3>STACKLY</h3>
+    </div>
+
+    <!-- Middle: Links -->
+    <div class="footer-section links-section">
+      <h4>Check Us</h4>
+      <a href="index.html">Portal 1</a>
+      <a href="home2.html">Portal 2</a>
+      <a href="contact1.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <!-- Right: Address + Social Icons -->
+    <div class="footer-section contact-section">
+      <h4>Get In Touch</h4>
+      <p>MMR COMPLEX, Salem, Tamil Nadu 636008</p>
+      <p>+91 70107 92745</p>
+      <p>info@thestackly.com</p>
+
+      <!-- ✅ Social Media Icons below address -->
+      <div class="social-icons">
+        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=Salem,+Tamil+Nadu&output=embed"
+      width="100%" height="250" style="border:0; border-radius:10px;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ CSS -->
+<style>
+  .footer {
+    background-color: #0c0016;
+    color: white;
+    padding: 40px 20px 10px;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+
+  .links-section a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links-section a:hover {
+    color: #00cccc;
+  }
+
+  .contact-section p {
+    margin: 5px 0;
+    color: #ccc;
+  }
+
+  /* ✅ Social icons under address */
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin: 0 8px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00cccc;
+    transform: scale(1.1);
+  }
+  .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-section p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* ✅ Icons directly under address */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00cccc;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+
+  .footer-map {
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin: 15px 0;
+    }
+  }
+</style>
+
+<!-- ✅ Add this Font Awesome link inside your <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stackly HealthPortal  — Trusted Medical News</title>
+  <link rel="stylesheet" href="healthyliving.css" />
+</head>
+<body>
+
+<!-- ✅ HEADER START -->
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="logo.jpg" alt="STACKLY Logo">
+    <span>STACKLY <strong>Health Care</strong></span>
+  </a>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html">Portal 1</a>
+    <a href="home2.html">Portal 2</a>
+    <a href="docsavai.html">Available Doctors</a>
+    <a href="healthyliving.html">Healthy Living</a>
+    <a href="condition.html">Condition</a>
+    <a href="contact1.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <a href="docsavai.html" class="find-doctor-btn">Find a Doctor</a>
+  <div class="menu-icon" id="menu-icon">&#9776;</div>
+</header>
+<section class="living-healthy">
+  <h2>Live a Healthy Life</h2>
+  <p>Discover wellness tips, fitness guides, and nutrition advice to stay healthy.</p>
+</section>
+
+
+</header>
+<!-- ✅ HEADER END -->
+
+
+<!-- ✅ CSS -->
+<style>
+  /* Basic Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf6f4;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Left - Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+    color: #003b3b;
+    font-weight: bold;
+  }
+
+  /* Center - Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex: 1;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #003b3b;
+    font-weight: 500;
+  }
+
+  .navbar a:hover {
+    color: #009999;
+  }
+
+  /* Right - Button */
+  .find-doctor-btn {
+    background-color: #009999;
+    color: white !important;
+    padding: 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .find-doctor-btn:hover {
+    background-color: #007777;
+  }
+
+  /* Hamburger Icon */
+  .menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    color: #003b3b;
+    margin-left: 10px;
+  }
+
+  /* ✅ Responsive Styles */
+  @media (max-width: 900px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #009999;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      width: 220px;
+    }
+
+    .navbar.active {
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .navbar a:hover {
+      background-color: #007777;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .find-doctor-btn {
+      display: none; /* hide in mobile for compact layout */
+    }
+  }
+</style>
+
+<!-- ✅ SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  });
+</script>
+  
+  <section class="grid">
+    <!-- Box 1–6 -->
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Nutrition">
+      <h2>Nutrition</h2>
+      <p>Eat fresh, live fresh. Build a balanced diet that fuels your energy and supports wellness.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048942.png" alt="Fitness">
+      <h2>Fitness</h2>
+      <p>Keep moving! Gentle workouts and daily activity boost both strength and positivity.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/2903/2903577.png" alt="Mental Wellness">
+      <h2>Mental Wellness</h2>
+      <p>Mindful moments and relaxation techniques to nurture your emotional well-being.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3763/3763143.png" alt="Sleep">
+      <h2>Better Sleep</h2>
+      <p>Rest deeply and wake up refreshed with healthy bedtime habits and calm surroundings.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087927.png" alt="Hydration">
+      <h2>Hydration</h2>
+      <p>Stay hydrated — it’s the simplest secret to clear skin, good digestion, and steady focus.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048800.png" alt="Nature">
+      <h2>Connect with Nature</h2>
+      <p>Fresh air and sunlight bring healing energy. Reconnect with nature to recharge your spirit.</p>
+    </div>
+
+    <!-- Box 7–12 -->
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3193/3193031.png" alt="Mindfulness">
+      <h2>Mindfulness</h2>
+      <p>Focus on the present. Practice calm breathing and gratitude for better emotional balance.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942799.png" alt="Social Life">
+      <h2>Social Connections</h2>
+      <p>Healthy relationships and laughter are as important as diet and exercise for overall happiness.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3050/3050398.png" alt="Self Care">
+      <h2>Self Care</h2>
+      <p>Take time for yourself — read, relax, and enjoy small pleasures that reduce stress.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3076/3076408.png" alt="Hygiene">
+      <h2>Hygiene</h2>
+      <p>Clean habits promote confidence and keep you feeling fresh and energized every day.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="Work Balance">
+      <h2>Work-Life Balance</h2>
+      <p>Organize your time, rest often, and remember — a balanced life is a productive one.</p>
+    </div>
+    <div class="box">
+      <img src="https://cdn-icons-png.flaticon.com/512/2769/2769608.png" alt="Positivity">
+      <h2>Positivity</h2>
+      <p>Smile more, worry less. A positive attitude strengthens both your health and your heart.</p>
+      
+    </div>
+  </section>
+
+ </body>
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left: Logo -->
+    <div class="footer-section logo-section">
+      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <h3>STACKLY</h3>
+    </div>
+
+    <!-- Middle: Links -->
+    <div class="footer-section links-section">
+      <h4>Check Us</h4>
+      <a href="index.html">Portal 1</a>
+      <a href="home2.html">Portal 2</a>
+      <a href="contact1.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <!-- Right: Address + Social Icons -->
+    <div class="footer-section contact-section">
+      <h4>Get In Touch</h4>
+      <p>MMR COMPLEX, Salem, Tamil Nadu 636008</p>
+      <p>+91 70107 92745</p>
+      <p>info@thestackly.com</p>
+
+      <!-- ✅ Social Media Icons below address -->
+      <div class="social-icons">
+        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=Salem,+Tamil+Nadu&output=embed"
+      width="100%" height="250" style="border:0; border-radius:10px;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ CSS -->
+<style>
+  .footer {
+    background-color: #0c0016;
+    color: white;
+    padding: 40px 20px 10px;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+
+  .links-section a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links-section a:hover {
+    color: #00cccc;
+  }
+
+  .contact-section p {
+    margin: 5px 0;
+    color: #ccc;
+  }
+
+  /* ✅ Social icons under address */
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin: 0 8px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00cccc;
+    transform: scale(1.1);
+  }
+  .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-section p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* ✅ Icons directly under address */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00cccc;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+
+  .footer-map {
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin: 15px 0;
+    }
+  }
+</style>
+
+<!-- ✅ Add this Font Awesome link inside your <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>

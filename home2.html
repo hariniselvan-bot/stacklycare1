@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Living Pharmacy</title>
+  <link rel="stylesheet" href="home2.css">
+</head>
+<!-- ✅ HEADER START -->
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="logo.jpg" alt="STACKLY Logo">
+    <span>STACKLY <strong>Health</strong></span>
+  </a>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html">Portal 1</a>
+    <a href="home2.html">Portal 2</a>
+    <a href="pet.html">Pet Pills</a>
+    <a href="drugs.html">Drugs & Supplements</a>
+    <a href="bmi.html">BMI Checker</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+
+  <a href="docsavai.html" class="find-doctor-btn">Find a Doctor</a>
+
+  <div class="menu-icon" id="menu-icon">&#9776;</div>
+</header>
+<!-- ✅ HEADER END -->
+
+<!-- ✅ CSS -->
+<style>
+  /* Base Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf6f4;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Left - Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+    color: #003b3b;
+    font-weight: bold;
+  }
+
+  /* Center - Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #003b3b;
+    font-weight: 500;
+  }
+
+  .navbar a:hover {
+    color: #009999;
+  }
+
+  /* Right - Button */
+  .find-doctor-btn {
+    background-color: #009999;
+    color: white !important;
+    padding: 6px 14px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+
+  .find-doctor-btn:hover {
+    background-color: #007777;
+  }
+
+  /* Hamburger Icon */
+  .menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    color: #003b3b;
+    margin-left: 10px;
+  }
+
+  /* ✅ Responsive: Mobile Menu */
+  @media (max-width: 900px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #009999;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      width: 220px;
+    }
+
+    .navbar.active {
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .navbar a:hover {
+      background-color: #007777;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .find-doctor-btn {
+      display: none; /* Hide Find Doctor button in mobile view (optional) */
+    }
+  }
+</style>
+
+<!-- ✅ WORKING JAVASCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  });
+</script>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="pharmacy.jpg" alt="Pharmacy Banner" class="hero-img">
+    <div class="hero-content">
+      <h2>Healthy Tablets and Medicine</h2>
+      <p>Your trusted source for quality health and wellness products.</p>
+      <div class="search-bar">
+        <select>
+          <option>All Categories</option>
+          <option>Medicine</option>
+          <option>Fitness</option>
+          <option>Diagnostics</option>
+        </select>
+        <input type="text" placeholder="Search for something...">
+        <a class="btn primary" href="drugs.html">medicines</a>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY INFO -->
+  <section class="info-section">
+    <div class="container info-grid">
+      <div class="info-box">
+        <img src="medicine.jpg" alt="Medicine" />
+        <h3>💊 Medicine</h3>
+        <p>Get all your medications in one place.</p>
+      </div>
+      <div class="info-box">
+        <img src="wellness.jpg" alt="Wellness" />
+        <h3>🌿 Wellness</h3>
+        <p>Natural and organic supplements for healthy living.</p>
+      </div>
+      <div class="info-box">
+        <img src="Diagnostic.jpg" alt="Diagnostic" />
+        <h3>🧪 Diagnostic</h3>
+        <p>Tools and kits for monitoring your health.</p>
+      </div>
+      <div class="info-box">
+        <img src="Health Corner.jpg" alt="Health Corner" />
+        <h3>❤️ Health Corner</h3>
+        <p>Expert health tips and wellness advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONAL BANNERS -->
+  <section class="promo-section">
+    <div class="container promo-grid">
+      <div class="promo-box blue">
+        <img src="Medication.jpg" alt="Medication" />
+        <h4>Medication at One Place</h4>
+        <p>Best deals on essential medicines.</p>
+      </div>
+      <div class="promo-box pink">
+        <img src="Naturally Good.jpg" alt="Naturally Good" />
+        <h4>Naturally Good</h4>
+        <p>Save up to 25% on organic health products.</p>
+      </div>
+      <div class="promo-box green">
+        <img src="Medlife.jpg" alt="Medlife" />
+        <h4>Medlife Products</h4>
+        <p>Upto 30% off on top brands.</p>
+      </div>
+      <div class="promo-box yellow">
+        <img src="Popular Medicines.jpg" alt="Popular Medicines" />
+        <h4>Popular Medicines</h4>
+        <p>Trusted by doctors and pharmacists.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR CATEGORIES -->
+  <section class="categories">
+    <div class="container">
+      <h2>Popular Categories</h2>
+      <div class="category-grid">
+        <div class="cat"><img src="OTC Drugs.jpg" alt="OTC Drugs"><p></p></div>
+        <div class="cat"><img src="Ayush.jpg" alt="Ayush"><p></p></div>
+        <div class="cat"><img src="Covid Essentials.jpg" alt="Covid Essentials"><p></p></div>
+        <div class="cat"><img src="Devices.jpg" alt="Devices"><p></p></div>
+        <div class="cat"><img src="Diabetes.jpg" alt="Diabetes"><p></p></div>
+        <div class="cat"><img src="eye.jpg" alt="Eyewear"><p></p></div>
+        <div class="cat"><img src="fit.jpg" alt="Fitness"><p></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <div class="container">
+      <h2>Our Daily Products</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="Waterpik WP-100 Dental Care.jpg" alt="Product 1">
+          <h4>Waterpik WP-100 Dental Care</h4>
+          <p>82.00</p>
+          <a href="#" class="add">Add to Cart</a>
+        </div>
+        <div class="product">
+          <img src="Organik Salmon Collagen.jpg" alt="Product 2">
+          <h4>Organik Salmon Collagen</h4>
+          <p>74.00</p>
+          <a href="#" class="add">Add to Cart</a>
+        </div>
+        <div class="product">
+          <img src="Dental Irigator.jpg" alt="Product 3">
+          <h4>Dental Irigator</h4>
+          <p>165.45</p>
+          <a href="#" class="add">Add to Cart</a>
+        </div>
+        <div class="product">
+          <img src="Siro Lorastad SP.jpg" alt="Product 4">
+          <h4>Siro Lorastad SP</h4>
+          <p>140.89</p>
+          <a href="#" class="add">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ </body>
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left: Logo -->
+    <div class="footer-section logo-section">
+      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <h3>STACKLY</h3>
+    </div>
+
+    <!-- Middle: Links -->
+    <div class="footer-section links-section">
+      <h4>Check Us</h4>
+      <a href="index.html">Portal 1</a>
+      <a href="home2.html">Portal 2</a>
+      <a href="contact1.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <!-- Right: Address + Social Icons -->
+    <div class="footer-section contact-section">
+      <h4>Get In Touch</h4>
+      <p>MMR COMPLEX, Salem, Tamil Nadu 636008</p>
+      <p>+91 70107 92745</p>
+      <p>info@thestackly.com</p>
+
+      <!-- ✅ Social Media Icons below address -->
+      <div class="social-icons">
+        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=Salem,+Tamil+Nadu&output=embed"
+      width="100%" height="250" style="border:0; border-radius:10px;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
+</footer>
+
+<!-- ✅ CSS -->
+<style>
+  .footer {
+    background-color: #0c0016;
+    color: white;
+    padding: 40px 20px 10px;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+
+  .links-section a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links-section a:hover {
+    color: #00cccc;
+  }
+
+  .contact-section p {
+    margin: 5px 0;
+    color: #ccc;
+  }
+
+  /* ✅ Social icons under address */
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    color: white;
+    margin: 0 8px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #00cccc;
+    transform: scale(1.1);
+  }
+  .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.contact-section p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* ✅ Icons directly under address */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00cccc;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+
+  .footer-map {
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin: 15px 0;
+    }
+  }
+</style>
+
+<!-- ✅ Add this Font Awesome link inside your <head> -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
