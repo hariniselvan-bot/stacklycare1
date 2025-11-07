@@ -134,7 +134,7 @@ nav ul li a.active {
 }
 
 body {
-  background: linear-gradient(135deg, #0a3938, #0b7c79);
+  background: linear-gradient(135deg, #0a3938, #0c0d0d);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -228,7 +228,7 @@ nav ul li a.active {
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
-  background: linear-gradient(to right, #3a003f, #11010f);
+  background: linear-gradient(to right, #bfd7e8, #bce8ec);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -276,7 +276,7 @@ nav ul li a.active {
 .contact-hero {
   position: relative;
   height: 60vh;
-  background: url('contactbg.jpg') no-repeat center center/cover;
+  background: url('login.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,15 +284,15 @@ nav ul li a.active {
   color: white;
 }
 .breadcrumb {
-  background-color: #002b2b; /* same as your dark strip */
+
   color: white;
-  padding: 10px 0;
+  padding: 50px 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .breadcrumb-link {
-  color: white;
+  color: rgb(222, 214, 214);
   text-decoration: none;
   margin: 0 5px;
   font-weight: 500;
@@ -329,7 +329,7 @@ nav ul li a.active {
 
 /* CONTACT SECTION */
 .contact-section {
-  background: #38a6ae;
+  background: #2e6969;
   color: white;
   padding: 80px 100px;
 }
@@ -481,251 +481,4 @@ footer {
 
 .social-section a:hover {
   color: #fff;
-}
-
-footer {
-  background: #120013;
-  color: white;
-  padding: 60px 80px 20px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.footer-logo img {
-  width: 50px;
-  border-radius: 10px;
-}
-
-.footer-logo p {
-  margin-top: 10px;
-  color: #aaa;
-}
-
-.footer-links ul {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.footer-links ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-links ul li a:hover {
-  color: #ff4bff;
-}
-
-.footer-contact p {
-  color: #aaa;
-  margin-top: 8px;
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  color: #777;
-}
-/* 🌙 Responsive Navbar Design */
-@media (max-width: 900px) {
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    position: relative;
-  }
-
-  /* Hide normal menu */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    border-radius: 10px;
-    padding: 15px 0;
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  nav ul li a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-  }
-
-  /* Hamburger icon */
-  .menu-toggle {
-    display: block;
-    font-size: 25px;
-    cursor: pointer;
-    color: #fff;
-  }
-}
-
-/* Hide hamburger for desktop */
-@media (min-width: 901px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  nav ul {
-    display: flex !important;
-    position: static;
-    background: none;
-    box-shadow: none;
-  }
-}
-/* ===== General Styling ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background-color: #0b0b0b;
-  color: #fff;
-}
-
-/* ===== Header ===== */
-.header {
-  width: 100%;
-  background: #000;
-  color: #fff;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #8b3dff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 40px;
-}
-
-.logo h1 {
-  font-size: 24px;
-  color: #b366ff;
-  letter-spacing: 1px;
-}
-
-/* ===== Navigation ===== */
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav a:hover {
-  color: #b366ff;
-}
-
-/* ===== Hamburger Icon ===== */
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-/* ===== Mobile Menu ===== */
-@media (max-width: 900px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    border-top: 1px solid #b366ff;
-    border-bottom: 1px solid #b366ff;
-    border-radius: 0 0 15px 15px;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 0 15px #b366ff;
-  }
-
-  #menu-toggle:checked + .menu-icon + .nav {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding: 25px 0;
-  }
-
-  .nav a {
-    font-size: 18px;
-    display: block;
-  }
-}
-
-/* ===== Extra Small Devices ===== */
-@media (max-width: 480px) {
-  .header {
-    padding: 10px 20px;
-  }
-
-  .logo h1 {
-    font-size: 20px;
-  }
-
-  .menu-icon {
-    font-size: 26px;
-  }
-
-  .nav a {
-    font-size: 16px;
-  }
 }
