@@ -6,171 +6,156 @@
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="drugs.css">
 </head>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Header</title>
-<style>
-/* ===== RESET ===== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-/* ===== HEADER ===== */
-.header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 25px;
-  background:#eaf5f3;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:9999;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* ===== LOGO ===== */
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.logo img{
-  width:35px;
-  height:35px;
-  border-radius:8px;
-}
-.logo h1{
-  font-size:1.2rem;
-  color:#0b4041;
-  font-weight:700;
-}
-
-/* ===== NAVIGATION ===== */
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:25px;
-}
-nav ul li a{
-  text-decoration:none;
-  color:#12343b;
-  font-weight:500;
-  transition:0.3s;
-}
-nav ul li a:hover{
-  color:#0ea5a0;
-}
-
-/* ===== BUTTON ===== */
-.find-btn{
-  background:#0ea5a0;
-  color:#fff;
-  padding:8px 18px;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ===== HAMBURGER ===== */
-.menu-toggle{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-  z-index:10000;
-}
-.menu-toggle span{
-  width:28px;
-  height:3px;
-  background:#0b4041;
-  border-radius:2px;
-  transition:0.3s;
-}
-
-/* ===== MOBILE VIEW ===== */
-@media (max-width:900px){
-  .menu-toggle{
-    display:flex;
-  }
-
-  nav{
-    position:absolute;
-    top:65px;
-    right:20px;
-    background:#0ea5a0;
-    border-radius:12px;
-    overflow:hidden;
-    transition:0.4s ease;
-    max-height:0;
-  }
-
-  nav.active{
-    max-height:300px;
-  }
-
-  nav ul{
-    flex-direction:column;
-    padding:10px 0;
-    align-items:center;
-    gap:15px;
-  }
-
-  nav ul li a{
-    color:#fff;
-    font-size:1rem;
-  }
-
-  .find-btn{
-    display:none;
-  }
-}
-</style>
-</head>
-<body>
-
+<!-- ✅ HEADER START -->
 <header class="header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.jpg" alt="Stackly Logo">
-        <h1>STACKLY Health</h1>
-      </a>
-    </div>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="STACKLY Logo">
+    <span><strong>STACKLY </strong></span>
+  </a>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Portal 1</a></li>
-      <li><a href="home2.html">Portal 2</a></li>
-      <li><a href="pet.html">Pet Pills</a></li>
-      <li><a href="drugs.html">Drugs & Supplements</a></li>
-      <li><a href="BMI.html">BMI Checker</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="cart.html">🛒 Cart</a></li>
-    </ul>
+  <nav class="navbar" id="navbar">
+    <a href="index.html">Home 1</a>
+    <a href="home2.html">Home 2</a>
+    <a href="pet.html">Pet Pills</a>
+    <a href="drugs.html">Drugs & Supplements</a>
+    <a href="bmi.html">BMI Checker</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
   </nav>
 
-  <a href="docsavai.html" class="find-btn">Find a Doctor</a>
+  <a href="docsavai.html" class="find-doctor-btn">Find a Doctor</a>
+
+  <div class="menu-icon" id="menu-icon">&#9776;</div>
 </header>
+<!-- ✅ HEADER END -->
 
+<!-- ✅ CSS -->
+<style>
+  /* Base Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf6f4;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Left - Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+    color: #003b3b;
+    font-weight: bold;
+  }
+
+  /* Center - Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #003b3b;
+    font-weight: 500;
+  }
+
+  .navbar a:hover {
+    color: #009999;
+  }
+
+  /* Right - Button */
+  .find-doctor-btn {
+    background-color: #009999;
+    color: white !important;
+    padding: 6px 14px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+
+  .find-doctor-btn:hover {
+    background-color: #007777;
+  }
+
+  /* Hamburger Icon */
+  .menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+    color: #003b3b;
+    margin-left: 10px;
+  }
+
+  /* ✅ Responsive: Mobile Menu */
+  @media (max-width: 900px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #009999;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      width: 220px;
+    }
+
+    .navbar.active {
+      display: flex;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .navbar a:hover {
+      background-color: #007777;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .find-doctor-btn {
+      display: none; /* Hide Find Doctor button in mobile view (optional) */
+    }
+  }
+</style>
+
+<!-- ✅ WORKING JAVASCRIPT -->
 <script>
-function toggleMenu(){
-  document.getElementById("navbar").classList.toggle("active");
-}
-</script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
 
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 </html>
 
@@ -181,7 +166,7 @@ function toggleMenu(){
   <section class="top-deals container">
     <div class="deal green">
       <h2>Top Deals of the Week</h2>
-      <a href="drugs.html">Shop Now</a>
+      <a href="pet.html">Shop Now</a>
     </div>
     <div class="deal supplements">
       <h2>Vitamins & Supplements</h2>
@@ -399,20 +384,19 @@ function toggleMenu(){
     });
   });
 </script>
-  </body>
-<footer class="footer">
+ <footer class="footer">
   <div class="footer-content">
     <!-- Left: Logo -->
     <div class="footer-section logo-section">
-      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <img src="logo.png" alt="Stackly Logo" class="footer-logo">
       <h3>STACKLY</h3>
     </div>
 
     <!-- Middle: Links -->
     <div class="footer-section links-section">
       <h4>Check Us</h4>
-      <a href="index.html">Portal 1</a>
-      <a href="home2.html">Portal 2</a>
+      <a href="index.html">Home 1</a>
+      <a href="home2.html">Home 2</a>
       <a href="contact1.html">Contact</a>
       <a href="login.html">Login</a>
     </div>
@@ -426,10 +410,10 @@ function toggleMenu(){
 
       <!-- ✅ Social Media Icons below address -->
       <div class="social-icons">
-        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
-        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -445,13 +429,21 @@ function toggleMenu(){
   <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
 </footer>
 
-<!-- ✅ CSS -->
+<!-- ✅ Footer CSS -->
 <style>
+  /* Make footer stretch full width of screen */
   .footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #0c0016;
     color: white;
-    padding: 40px 20px 10px;
+    padding: 60px 30px 20px;
     text-align: center;
+    box-sizing: border-box;
   }
 
   .footer-content {
@@ -459,12 +451,12 @@ function toggleMenu(){
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   .footer-section {
     flex: 1 1 250px;
-    margin: 10px;
+    margin: 15px;
   }
 
   .footer-logo {
@@ -481,7 +473,7 @@ function toggleMenu(){
     display: block;
     color: #ddd;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 6px 0;
   }
 
   .links-section a:hover {
@@ -493,60 +485,35 @@ function toggleMenu(){
     color: #ccc;
   }
 
-  /* ✅ Social icons under address */
+  /* ✅ Social icons visible and centered */
   .social-icons {
     margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
   }
 
   .social-icons a {
-    color: white;
-    margin: 0 8px;
-    font-size: 20px;
-    text-decoration: none;
+    color: #ffffff;
+    background: #0c0016;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
     transition: 0.3s;
   }
 
   .social-icons a:hover {
-    color: #00cccc;
-    transform: scale(1.1);
+    color: #0c0016;
+    background: #000000;
+    transform: scale(1.2);
   }
-  .contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.contact-section p {
-  margin: 4px 0;
-  color: #ccc;
-}
-
-/* ✅ Icons directly under address */
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00cccc;
-  text-shadow: 0 0 8px #00ffff;
-}
-
 
   .footer-map {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .footer-bottom {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 0.9rem;
     color: #aaa;
   }
@@ -562,10 +529,14 @@ function toggleMenu(){
     .footer-section {
       margin: 15px 0;
     }
+
+    .social-icons {
+      justify-content: center;
+    }
   }
 </style>
 
-<!-- ✅ Add this Font Awesome link inside your <head> -->
+<!-- ✅ Font Awesome for social icons -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
