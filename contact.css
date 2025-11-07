@@ -283,6 +283,26 @@ nav ul li a.active {
   text-align: center;
   color: white;
 }
+.breadcrumb {
+  background-color: #002b2b; /* same as your dark strip */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.breadcrumb-link:hover {
+  color: #00b3b3; /* highlight color when hovered */
+  text-decoration: underline;
+}
 
 .contact-hero .overlay {
   position: absolute;
