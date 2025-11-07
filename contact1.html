@@ -10,7 +10,7 @@
 <header class="header">
   <a href="index.html" class="logo">
     <img src="logo.jpg" alt="STACKLY Logo">
-    <span>STACKLY <strong>Health</strong></span>
+    <span>STACKLY <strong>Health Care</strong></span>
   </a>
 
   <nav class="navbar" id="navbar">
@@ -29,9 +29,10 @@
 </header>
 <!-- ✅ HEADER END -->
 
+
 <!-- ✅ CSS -->
 <style>
-  /* Base Header Styling */
+  /* Basic Header Styling */
   .header {
     display: flex;
     justify-content: space-between;
@@ -68,8 +69,8 @@
   .navbar {
     display: flex;
     justify-content: center;
+    gap: 18px;
     flex: 1;
-    gap: 20px;
   }
 
   .navbar a {
@@ -86,11 +87,11 @@
   .find-doctor-btn {
     background-color: #009999;
     color: white !important;
-    padding: 6px 14px;
+    padding: 7px 15px;
     border-radius: 25px;
     text-decoration: none;
-    margin-left: 20px;
     white-space: nowrap;
+    font-weight: 500;
   }
 
   .find-doctor-btn:hover {
@@ -106,7 +107,7 @@
     margin-left: 10px;
   }
 
-  /* ✅ Responsive: Mobile Menu */
+  /* ✅ Responsive Styles */
   @media (max-width: 900px) {
     .navbar {
       display: none;
@@ -139,12 +140,12 @@
     }
 
     .find-doctor-btn {
-      display: none; /* Hide Find Doctor button in mobile view (optional) */
+      display: none; /* hide in mobile for compact layout */
     }
   }
 </style>
 
-<!-- ✅ WORKING JAVASCRIPT -->
+<!-- ✅ SCRIPT -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
@@ -156,15 +157,13 @@
   });
 </script>
 
-  
-<body>
 
  <!-- CONTACT HERO SECTION -->
   <section class="contact-hero">
     <div class="overlay"></div>
     <div class="contact-title">
       <h1>Contact Us</h1>
-\
+      
      <div class="breadcrumb">
   <a href="index.html" class="breadcrumb-link">Home</a> /
   <a href="contact.html" class="breadcrumb-link">Contact</a>
@@ -354,7 +353,7 @@
 }
 
 .social-icons a:hover {
-  color: #00cccc;
+  color: #050505;
   text-shadow: 0 0 8px #00ffff;
 }
 
