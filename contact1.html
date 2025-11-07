@@ -9,13 +9,13 @@
 <!-- ✅ HEADER START -->
 <header class="header">
   <a href="index.html" class="logo">
-    <img src="logo.jpg" alt="STACKLY Logo">
-    <span>STACKLY <strong>Health Care</strong></span>
+    <img src="logo.png" alt="STACKLY Logo">
+    <span><strong> STACKLY </strong></span>
   </a>
 
   <nav class="navbar" id="navbar">
-    <a href="index.html">Portal 1</a>
-    <a href="home2.html">Portal 2</a>
+    <a href="index.html">Home 1</a>
+    <a href="home2.html">Home 2</a>
     <a href="docsavai.html">Available Doctors</a>
     <a href="healthyliving.html">Healthy Living</a>
     <a href="condition.html">Condition</a>
@@ -85,7 +85,7 @@
 
   /* Right - Button */
   .find-doctor-btn {
-    background-color: #009999;
+    background-color: #22999b;
     color: white !important;
     padding: 7px 15px;
     border-radius: 25px;
@@ -95,7 +95,7 @@
   }
 
   .find-doctor-btn:hover {
-    background-color: #007777;
+    background-color: #0c042a;
   }
 
   /* Hamburger Icon */
@@ -112,7 +112,7 @@
     .navbar {
       display: none;
       flex-direction: column;
-      background-color: #009999;
+      background-color: #01083c;
       position: absolute;
       top: 70px;
       right: 20px;
@@ -132,7 +132,7 @@
     }
 
     .navbar a:hover {
-      background-color: #007777;
+      background-color: #000303;
     }
 
     .menu-icon {
@@ -216,20 +216,19 @@
     </div>
   </section>
 
-</body>
-<footer class="footer">
+ <footer class="footer">
   <div class="footer-content">
     <!-- Left: Logo -->
     <div class="footer-section logo-section">
-      <img src="logo.jpg" alt="Stackly Logo" class="footer-logo">
+      <img src="logo.png" alt="Stackly Logo" class="footer-logo">
       <h3>STACKLY</h3>
     </div>
 
     <!-- Middle: Links -->
     <div class="footer-section links-section">
       <h4>Check Us</h4>
-      <a href="index.html">Portal 1</a>
-      <a href="home2.html">Portal 2</a>
+      <a href="index.html">Home 1</a>
+      <a href="home2.html">Home 2</a>
       <a href="contact1.html">Contact</a>
       <a href="login.html">Login</a>
     </div>
@@ -243,10 +242,10 @@
 
       <!-- ✅ Social Media Icons below address -->
       <div class="social-icons">
-        <a href= "404.html"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
-        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -262,13 +261,21 @@
   <p class="footer-bottom">© 2025 Stackly | All Rights Reserved</p>
 </footer>
 
-<!-- ✅ CSS -->
+<!-- ✅ Footer CSS -->
 <style>
+  /* Make footer stretch full width of screen */
   .footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #0c0016;
     color: white;
-    padding: 40px 20px 10px;
+    padding: 60px 30px 20px;
     text-align: center;
+    box-sizing: border-box;
   }
 
   .footer-content {
@@ -276,12 +283,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   .footer-section {
     flex: 1 1 250px;
-    margin: 10px;
+    margin: 15px;
   }
 
   .footer-logo {
@@ -298,7 +305,7 @@
     display: block;
     color: #ddd;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 6px 0;
   }
 
   .links-section a:hover {
@@ -310,60 +317,35 @@
     color: #ccc;
   }
 
-  /* ✅ Social icons under address */
+  /* ✅ Social icons visible and centered */
   .social-icons {
     margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
   }
 
   .social-icons a {
-    color: white;
-    margin: 0 8px;
-    font-size: 20px;
-    text-decoration: none;
+    color: #ffffff;
+    background: #0c0016;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
     transition: 0.3s;
   }
 
   .social-icons a:hover {
-    color: #00cccc;
-    transform: scale(1.1);
+    color: #0c0016;
+    background: #000000;
+    transform: scale(1.2);
   }
-  .contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.contact-section p {
-  margin: 4px 0;
-  color: #ccc;
-}
-
-/* ✅ Icons directly under address */
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 20px;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #050505;
-  text-shadow: 0 0 8px #00ffff;
-}
-
 
   .footer-map {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .footer-bottom {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 0.9rem;
     color: #aaa;
   }
@@ -379,10 +361,14 @@
     .footer-section {
       margin: 15px 0;
     }
+
+    .social-icons {
+      justify-content: center;
+    }
   }
 </style>
 
-<!-- ✅ Add this Font Awesome link inside your <head> -->
+<!-- ✅ Font Awesome for social icons -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
